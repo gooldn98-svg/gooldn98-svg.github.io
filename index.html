@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الأنيس في الرياضيات - الصف الثالث الثانوي</title>
+    <title>الأنيس في الرياضيات - الوحدة الأولى: الأعداد المركبة</title>
     <style>
         :root {
             --primary-color: #1b4d3e;
@@ -48,43 +48,33 @@
             margin-top: 40px;
             margin-bottom: 20px;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .card {
+        .lesson-card {
             background-color: var(--card-bg);
             border-radius: 8px;
             padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            border-top: 4px solid var(--secondary-color);
+            border-right: 5px solid var(--secondary-color);
         }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
+        .lesson-card h3 {
             color: var(--primary-color);
             margin-top: 0;
         }
-        .card ul {
-            padding-right: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 16px;
+        .rule-box {
+            background-color: #e6f4ea;
+            border: 1px solid #ceead6;
+            padding: 12px;
             border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #137333;
         }
-        .btn:hover {
-            background-color: var(--primary-color);
+        .example-box {
+            background-color: #fef7e0;
+            border: 1px solid #fef1c7;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 10px 0;
         }
         footer {
             text-align: center;
@@ -100,57 +90,68 @@
 
     <header>
         <h1>الأنيس في الرياضيات</h1>
-        <p>رياضيات الصف الثالث الثانوي – القسم العلمي | قسم الجبر – المنهج اليمني</p>
+        <p>الصف الثالث الثانوي – القسم العلمي | الوحدة الأولى: الأعداد المركبة</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">📚 الوحدات الدراسية المعتمدة</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🔢 الوحدة الأولى: الأعداد المركبة</h3>
-                <ul>
-                    <li>العدد المركب وصورته الجبرية</li>
-                    <li>جمع وطرح الأعداد المركبة</li>
-                    <li>ضرب وقسمة الأعداد المركبة</li>
-                    <li>الصورة القطبية للعدد المركب</li>
-                    <li>القوى والجذور</li>
-                    <li>حل المعادلة من الدرجة الثانية</li>
-                </ul>
-                <a href="#" class="btn">استعرض الوحدة</a>
-            </div>
+        <h2 class="section-title">🔢 دروس الوحدة الأولى (المنهج اليمني)</h2>
 
-            <div class="card">
-                <h3>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h3>
-                <ul>
-                    <li>مبدأ العد الأساسي</li>
-                    <li>التباديل وقوانينها</li>
-                    <li>التوافيق والفرق بينها وبين التباديل</li>
-                    <li>مبرهنة ذات الحدين والحد العام</li>
-                </ul>
-                <a href="#" class="btn">استعرض الوحدة</a>
+        <!-- الدرس الأول -->
+        <div class="lesson-card">
+            <h3>١-١ العدد المركب وصورته الجبرية</h3>
+            <p><strong>التمهيد:</strong> لماذا ظهرت الأعداد المركبة؟ عجزت الأعداد الحقيقية عن إيجاد جذور تربيعية للأعداد السالبة مثل جذر(-١).</p>
+            <div class="rule-box">
+                الصورة الجبرية للعدد المركب: ع = أ + ب ت <br>
+                يثبت التعريف أن: ت² = -١ ، حيث أ هو الجزء الحقيقي، وب هو الجزء التخيلي.
             </div>
-
-            <div class="card">
-                <h3>🎲 الوحدة الثالثة: الاحتمالات</h3>
-                <ul>
-                    <li>بعض المبرهنات الأساسية في الاحتمالات</li>
-                    <li>بناء النموذج الاحتمالي وفضاء العينة</li>
-                    <li>الاحتمال الشرطي وقانون الضرب والحوادث المستقلة</li>
-                </ul>
-                <a href="#" class="btn">استعرض الوحدة</a>
-            </div>
-
-            <div class="card">
-                <h3>📐 الوحدة الرابعة: القطوع المخروطية</h3>
-                <ul>
-                    <li>تمهيد وتعريف القطوع المخروطية</li>
-                    <li>القطع المكافئ وعناصره ومعادلاته</li>
-                    <li>القطع الناقص وعناصره ومعادلاته</li>
-                    <li>القطع الزائد وعناصره ومعادلاته</li>
-                </ul>
-                <a href="#" class="btn">استعرض الوحدة</a>
+            <div class="example-box">
+                <strong>مثال محلول خطوة بخطوة:</strong> ضع العدد ع = 3 + جذر(-16) بالصورة الجبرية.<br>
+                <strong>الحل:</strong> ع = 3 + جذر(16 × -1) = 3 + 4 جذر(-1) = 3 + 4ت.
             </div>
         </div>
+
+        <!-- الدرس الثاني -->
+        <div class="lesson-card">
+            <h3>١-٢ جمع وطرح الأعداد المركبة</h3>
+            <p><strong>الفكرة الأساسية:</strong> لجمع أو طرح عددين مركبين، نجمع (أو نطرح) الأجزاء الحقيقية معاً، والأجزاء التخيليّة معاً.</p>
+            <div class="rule-box">
+                إذا كان ع₁ = أ₁ + ب₁ت ، ع₂ = أ₂ + ب₂ت <br>
+                فإن: ع₁ ± ع₂ = (أ₁ ± أ₂) + (ب₁ ± ب₂)ت
+            </div>
+        </div>
+
+        <!-- الدرس الثالث -->
+        <div class="lesson-card">
+            <h3>١-٣ ضرب وقسمة الأعداد المركبة</h3>
+            <p><strong>الفكرة الأساسية:</strong> يتم الضرب بتوزيع القوسين واستخدام العلاقة ت² = -١، بينما تتم القسمة بالضرب في مرافق المقام.</p>
+            <div class="rule-box">
+                مرافق العدد ع = أ + بت هو: عَ = أ - ب ت <br>
+                حاصل ضرب العدد في مرافق يساوي: ع × عَ = أ² + ب²
+            </div>
+        </div>
+
+        <!-- الدرس الرابع -->
+        <div class="lesson-card">
+            <h3>١-٤ الصورة القطبية للعدد المركب</h3>
+            <p><strong>الفكرة الأساسية:</strong> تمثيل العدد المركب بدلالة المعيار (ر) والسعة (هـ).</p>
+            <div class="rule-box">
+                المعيار: ر = |ع| = جذر(أ² + ب²)<br>
+                الصورة المثلثية (القطبية): ع = ر (جتا هـ + ت جا هـ)
+            </div>
+        </div>
+
+        <!-- الدرس الخامس -->
+        <div class="lesson-card">
+            <h3>١-٥ القوى والجذور للأعداد المركبة</h3>
+            <p><strong>الفكرة الأساسية:</strong> دراسة دورة قوى العدد التخيلي (ت، ت²=-1، ت³=-ت، ت⁴=1) وتبسيط الأسس الكبيرة.</p>
+        </div>
+
+        <!-- الدرس السادس -->
+        <div class="lesson-card">
+            <h3>١-٦ حل المعادلة من الدرجة الثانية</h3>
+            <p><strong>الفكرة الأساسية:</strong> استخدام القانون العام لحل المعادلات التربيعية في مجموعة الأعداد المركبة عندما يكون مميز المعادلة سالباً.</p>
+        </div>
+
     </div>
 
     <footer>
