@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الأنيس في الرياضيات - الوحدة الرابعة: القطوع المخروطية</title>
+    <title>منصة الأنيس في الرياضيات - الجبر (الصف الثالث الثانوي)</title>
     <style>
         :root {
             --primary-color: #1b4d3e;
@@ -20,20 +20,21 @@
             margin: 0;
             padding: 0;
             direction: rtl;
+            line-height: 1.6;
         }
         header {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
         }
         header h1 {
             margin: 0 0 10px 0;
-            font-size: 28px;
+            font-size: 32px;
         }
         header p {
             margin: 0;
-            font-size: 16px;
+            font-size: 18px;
             opacity: 0.9;
         }
         .container {
@@ -41,40 +42,47 @@
             margin: 30px auto;
             padding: 0 20px;
         }
-        .section-title {
+        .unit-section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--secondary-color);
+        }
+        .unit-section h2 {
             color: var(--primary-color);
             border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            padding-bottom: 10px;
+            margin-top: 0;
         }
         .lesson-card {
-            background-color: var(--card-bg);
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-right: 5px solid var(--secondary-color);
+            padding: 15px;
+            margin-top: 15px;
         }
-        .lesson-card h3 {
-            color: var(--primary-color);
+        .lesson-card h4 {
+            color: var(--secondary-color);
             margin-top: 0;
+            margin-bottom: 10px;
         }
         .rule-box {
             background-color: #e6f4ea;
             border: 1px solid #ceead6;
-            padding: 12px;
+            padding: 10px;
             border-radius: 5px;
-            margin: 10px 0;
+            margin: 8px 0;
             font-weight: bold;
             color: #137333;
         }
         .example-box {
             background-color: #fef7e0;
             border: 1px solid #fef1c7;
-            padding: 12px;
+            padding: 10px;
             border-radius: 5px;
-            margin: 10px 0;
+            margin: 8px 0;
         }
         footer {
             text-align: center;
@@ -89,43 +97,95 @@
 <body>
 
     <header>
-        <h1>الأنيس في الرياضيات</h1>
-        <p>الصف الثالث الثانوي – القسم العلمي | الجبر – المنهج اليمني</p>
+        <h1>منصة الأنيس في الرياضيات</h1>
+        <p>مرجع طالب الصف الثالث الثانوي (القسم العلمي) – مقرر الجبر | المنهج اليمني</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">📐 الوحدة الرابعة: القطوع المخروطية</h2>
 
-        <!-- الدرس الأول -->
-        <div class="lesson-card">
-            <h3>٤-١ تمهيد وتعريف القطوع المخروطية</h3>
-            <p><strong>الفكرة الأساسية:</strong> التعرف على كيفية ناتج تقاطع مستوى مع سطح مخروط دائري قائم (الدائرة، المكافئ، الناقص، الزائد).</p>
-        </div>
+        <!-- الوحدة الأولى -->
+        <div class="unit-section">
+            <h2>🔢 الوحدة الأولى: الأعداد المركبة</h2>
+            
+            <div class="lesson-card">
+                <h4>١-١ العدد المركب وصورته الجبرية</h4>
+                <p>عجزت الأعداد الحقيقية عن إيجاد جذور تربيعية للأعداد السالبة، فظهرت الأعداد المركبة.</p>
+                <div class="rule-box">الصورة الجبرية: ع = أ + ب ت (حيث ت² = -١)</div>
+                <div class="example-box"><strong>مثال:</strong> ضع ع = 3 + جذر(-16) بالصورة الجبرية ← الحل: 3 + 4ت</div>
+            </div>
 
-        <!-- الدرس الثاني -->
-        <div class="lesson-card">
-            <h3>٤-٢ القطع المكافئ وعناصره ومعادلاته</h3>
-            <p><strong>الفكرة الأساسية:</strong> دراسة المحل الهندسي لنقطة تتحرك بحيث تبعد بُعداً ثابتاً عن نقطة ثابتة (البؤرة) ومستقيم ثابت (الدليل).</p>
-            <div class="rule-box">
-                الصورة القياسية (التي رأسها نقطة الأصل): ص² = 4جـ س (محورها هو محور السينات)
+            <div class="lesson-card">
+                <h4>١-٢ جمع وطرح الأعداد المركبة</h4>
+                <div class="rule-box">ع₁ ± ع₂ = (أ₁ ± أ₂) + (ب₁ ± ب₂)ت</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>١-٣ ضرب وقسمة الأعداد المركبة ومرافق العدد</h4>
+                <div class="rule-box">مرافق ع = أ - بت | ع × عَ = أ² + ب²</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>١-٤ الصورة القطبية للعدد المركب والجذور</h4>
+                <div class="rule-box">المعيار ر = جذر(أ² + ب²) | ع = ر(جتا هـ + ت جا هـ)</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>١-٥ حل المعادلة من الدرجة الثانية في مجموعة الأعداد المركبة</h4>
             </div>
         </div>
 
-        <!-- الدرس الثالث -->
-        <div class="lesson-card">
-            <h3>٤-٣ القطع الناقص وعناصره ومعادلاته</h3>
-            <p><strong>الفكرة الأساسية:</strong> المحل الهندسي لنقطة يكون مجموع بؤرتيها مقداراً ثابتاً.</p>
-            <div class="rule-box">
-                الصورة القياسية: (س² / أ²) + (ص² / ب²) = 1 ، حيث أ > ب > 0
+        <!-- الوحدة الثانية -->
+        <div class="unit-section">
+            <h2>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h2>
+            
+            <div class="lesson-card">
+                <h4>٢-١ مبدأ العد الأساسي</h4>
+                <div class="rule-box">العدد الإجمالي للطرق للعمليات المتتالية = ن₁ × ن₂ × ...</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>٢-٢ التباديل والتوافيق</h4>
+                <div class="rule-box">ل(ن، ر) = ن! / (ن - ر)! | ق(ن، ر) = ن! / [ر!(ن - ر)!]</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>٢-٣ مبرهنة ذات الحدين والحد العام</h4>
+                <div class="rule-box">الحد العام: ح(ر+1) = ق(ن، ر) × س^(ن-ر) × ص^ر</div>
             </div>
         </div>
 
-        <!-- الدرس الرابع -->
-        <div class="lesson-card">
-            <h3>٤-٤ القطع الزائد وعناصره ومعادلاته</h3>
-            <p><strong>الفكرة الأساسية:</strong> المحل الهندسي لنقطة يكون القيمة المطلقة للفرق بين بؤرتيها مقداراً ثابتاً.</p>
-            <div class="rule-box">
-                الصورة القياسية: (س² / أ²) - (ص² / ب²) = 1
+        <!-- الوحدة الثالثة -->
+        <div class="unit-section">
+            <h2>🎲 الوحدة الثالثة: الاحتمالات</h2>
+            
+            <div class="lesson-card">
+                <h4>٣-١ المبرهنات الأساسية في الاحتمالات وفضاء العينة</h4>
+                <div class="rule-box">ل(أ ∪ ب) = ل(أ) + ل(ب) - ل(أ ∩ ب)</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>٣-٢ الاحتمال الشرطي وقانون الضرب والحوادث المستقلة</h4>
+                <div class="rule-box">ل(أ | ب) = ل(أ ∩ ب) / ل(ب)</div>
+            </div>
+        </div>
+
+        <!-- الوحدة الرابعة -->
+        <div class="unit-section">
+            <h2>📐 الوحدة الرابعة: القطوع المخروطية</h2>
+            
+            <div class="lesson-card">
+                <h4>٤-١ القطع المكافئ وعناصره ومعادلاته</h4>
+                <div class="rule-box">ص² = 4جـ س (حيث البؤرة (جـ، 0))</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>٤-٢ القطع الناقص وعناصره ومعادلاته</h4>
+                <div class="rule-box">(س² / أ²) + (ص² / ب²) = 1 (أ > ب)</div>
+            </div>
+
+            <div class="lesson-card">
+                <h4>٤-٣ القطع الزائد وعناصره ومعادلاته</h4>
+                <div class="rule-box">(س² / أ²) - (ص² / ب²) = 1</div>
             </div>
         </div>
 
