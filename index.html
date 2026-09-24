@@ -41,6 +41,13 @@
             margin: 30px auto;
             padding: 0 20px;
         }
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -51,7 +58,6 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
             transition: transform 0.2s;
             border-top: 4px solid var(--secondary-color);
         }
@@ -60,14 +66,19 @@
         }
         .card h3 {
             color: var(--primary-color);
-            margin-top: 10px;
+            margin-top: 0;
+        }
+        .card ul {
+            padding-right: 20px;
+            font-size: 14px;
+            color: #555;
         }
         .btn {
             display: inline-block;
             margin-top: 15px;
             background-color: var(--secondary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
@@ -93,36 +104,51 @@
     </header>
 
     <div class="container">
+        <h2 class="section-title">📚 الوحدات الدراسية المعتمدة</h2>
         <div class="grid">
             <div class="card">
-                <h3>📚 الوحدات الدراسية</h3>
-                <p>الأعداد المركبة، مبدأ العد، الاحتمالات، والقطوع المخروطية.</p>
-                <a href="#" class="btn">استعرض الوحدات</a>
+                <h3>🔢 الوحدة الأولى: الأعداد المركبة</h3>
+                <ul>
+                    <li>العدد المركب وصورته الجبرية</li>
+                    <li>جمع وطرح الأعداد المركبة</li>
+                    <li>ضرب وقسمة الأعداد المركبة</li>
+                    <li>الصورة القطبية للعدد المركب</li>
+                    <li>القوى والجذور</li>
+                    <li>حل المعادلة من الدرجة الثانية</li>
+                </ul>
+                <a href="#" class="btn">استعرض الوحدة</a>
             </div>
+
             <div class="card">
-                <h3>🤖 المساعد الذكي</h3>
-                <p>مساعد الأنيس لشرح المسائل وتوضيح خطوات الحل بالتفصيل.</p>
-                <a href="#" class="btn">ابدأ المحادثة</a>
+                <h3>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h3>
+                <ul>
+                    <li>مبدأ العد الأساسي</li>
+                    <li>التباديل وقوانينها</li>
+                    <li>التوافيق والفرق بينها وبين التباديل</li>
+                    <li>مبرهنة ذات الحدين والحد العام</li>
+                </ul>
+                <a href="#" class="btn">استعرض الوحدة</a>
             </div>
+
             <div class="card">
-                <h3>📝 بنك الأسئلة</h3>
-                <p>أسئلة منظمة حسب الوحدات ومستويات الصعوبة (سهل، متوسط، متقدم).</p>
-                <a href="#" class="btn">تصفح الأسئلة</a>
+                <h3>🎲 الوحدة الثالثة: الاحتمالات</h3>
+                <ul>
+                    <li>بعض المبرهنات الأساسية في الاحتمالات</li>
+                    <li>بناء النموذج الاحتمالي وفضاء العينة</li>
+                    <li>الاحتمال الشرطي وقانون الضرب والحوادث المستقلة</li>
+                </ul>
+                <a href="#" class="btn">استعرض الوحدة</a>
             </div>
+
             <div class="card">
-                <h3>🎯 الاختبارات التفاعلية</h3>
-                <p>اختبر فهمك واحصل على تقييم فوري وتوصيات للمراجعة.</p>
-                <a href="#" class="btn">ابدأ اختباراً</a>
-            </div>
-            <div class="card">
-                <h3>📄 الاختبارات الوزارية</h3>
-                <p>نماذج وأسئلة الوزارة السابقة للتدرب على أنماط الاختبارات.</p>
-                <a href="#" class="btn">عرض الاختبارات</a>
-            </div>
-            <div class="card">
-                <h3>📊 تقدمي الدراسي</h3>
-                <p>لوحة متابعة لمستوى إنجازك في المنهج والدروس المكتملة.</p>
-                <a href="#" class="btn">عرض التقدم</a>
+                <h3>📐 الوحدة الرابعة: القطوع المخروطية</h3>
+                <ul>
+                    <li>تمهيد وتعريف القطوع المخروطية</li>
+                    <li>القطع المكافئ وعناصره ومعادلاته</li>
+                    <li>القطع الناقص وعناصره ومعادلاته</li>
+                    <li>القطع الزائد وعناصره ومعادلاته</li>
+                </ul>
+                <a href="#" class="btn">استعرض الوحدة</a>
             </div>
         </div>
     </div>
