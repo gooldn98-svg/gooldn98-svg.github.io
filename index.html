@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنيس في الرياضيات - الصف الثالث الثانوي</title>
+    <style>
+        :root {
+            --primary-color: #1b4d3e;
+            --secondary-color: #2c6b56;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #d97706;
+        }
+        body {
+            font-family: 'Tahoma', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+        header p {
+            margin: 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s;
+            border-top: 4px solid var(--secondary-color);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #e5e7eb;
+            color: #4b5563;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>الأنيس في الرياضيات</h1>
+        <p>رياضيات الصف الثالث الثانوي – القسم العلمي | قسم الجبر – المنهج اليمني</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h3>📚 الوحدات الدراسية</h3>
+                <p>الأعداد المركبة، مبدأ العد، الاحتمالات، والقطوع المخروطية.</p>
+                <a href="#" class="btn">استعرض الوحدات</a>
+            </div>
+            <div class="card">
+                <h3>🤖 المساعد الذكي</h3>
+                <p>مساعد الأنيس لشرح المسائل وتوضيح خطوات الحل بالتفصيل.</p>
+                <a href="#" class="btn">ابدأ المحادثة</a>
+            </div>
+            <div class="card">
+                <h3>📝 بنك الأسئلة</h3>
+                <p>أسئلة منظمة حسب الوحدات ومستويات الصعوبة (سهل، متوسط، متقدم).</p>
+                <a href="#" class="btn">تصفح الأسئلة</a>
+            </div>
+            <div class="card">
+                <h3>🎯 الاختبارات التفاعلية</h3>
+                <p>اختبر فهمك واحصل على تقييم فوري وتوصيات للمراجعة.</p>
+                <a href="#" class="btn">ابدأ اختباراً</a>
+            </div>
+            <div class="card">
+                <h3>📄 الاختبارات الوزارية</h3>
+                <p>نماذج وأسئلة الوزارة السابقة للتدرب على أنماط الاختبارات.</p>
+                <a href="#" class="btn">عرض الاختبارات</a>
+            </div>
+            <div class="card">
+                <h3>📊 تقدمي الدراسي</h3>
+                <p>لوحة متابعة لمستوى إنجازك في المنهج والدروس المكتملة.</p>
+                <a href="#" class="btn">عرض التقدم</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>إعداد أ/ أنيس المقطري | منصة الأنيس في الرياضيات</p>
+    </footer>
+
+</body>
+</html>
