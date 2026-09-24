@@ -77,12 +77,28 @@
             font-weight: bold;
             color: #137333;
         }
-        .example-box {
-            background-color: #fef7e0;
-            border: 1px solid #fef1c7;
+        .quiz-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .quiz-box h4 {
+            color: #1d4ed8;
+            margin-top: 0;
+        }
+        details {
+            background-color: #ffffff;
+            border: 1px solid #93c5fd;
             padding: 10px;
             border-radius: 5px;
-            margin: 8px 0;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+            color: #1e40af;
         }
         footer {
             text-align: center;
@@ -106,86 +122,72 @@
         <!-- الوحدة الأولى -->
         <div class="unit-section">
             <h2>🔢 الوحدة الأولى: الأعداد المركبة</h2>
-            
             <div class="lesson-card">
-                <h4>١-١ العدد المركب وصورته الجبرية</h4>
-                <p>عجزت الأعداد الحقيقية عن إيجاد جذور تربيعية للأعداد السالبة، فظهرت الأعداد المركبة.</p>
-                <div class="rule-box">الصورة الجبرية: ع = أ + ب ت (حيث ت² = -١)</div>
-                <div class="example-box"><strong>مثال:</strong> ضع ع = 3 + جذر(-16) بالصورة الجبرية ← الحل: 3 + 4ت</div>
+                <h4>ملخص أهم القوانين</h4>
+                <div class="rule-box">الصورة الجبرية: ع = أ + ب ت | مرافق ع = أ - بت | ر = جذر(أ² + ب²)</div>
             </div>
-
-            <div class="lesson-card">
-                <h4>١-٢ جمع وطرح الأعداد المركبة</h4>
-                <div class="rule-box">ع₁ ± ع₂ = (أ₁ ± أ₂) + (ب₁ ± ب₂)ت</div>
-            </div>
-
-            <div class="lesson-card">
-                <h4>١-٣ ضرب وقسمة الأعداد المركبة ومرافق العدد</h4>
-                <div class="rule-box">مرافق ع = أ - بت | ع × عَ = أ² + ب²</div>
-            </div>
-
-            <div class="lesson-card">
-                <h4>١-٤ الصورة القطبية للعدد المركب والجذور</h4>
-                <div class="rule-box">المعيار ر = جذر(أ² + ب²) | ع = ر(جتا هـ + ت جا هـ)</div>
-            </div>
-
-            <div class="lesson-card">
-                <h4>١-٥ حل المعادلة من الدرجة الثانية في مجموعة الأعداد المركبة</h4>
+            <!-- اختبار تفاعلي للوحدة الأولى -->
+            <div class="quiz-box">
+                <h4>🎯 اختبار ذاتي سريع للوحدة الأولى</h4>
+                <p><strong>السؤال:</strong> ما هو المرافق للعدد المركب ع = 3 - 4ت ؟</p>
+                <details>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
+                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 3 + 4ت (يتم تغيير إشارة الجزء التخيلي فقط).</p>
+                </details>
             </div>
         </div>
 
         <!-- الوحدة الثانية -->
         <div class="unit-section">
             <h2>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h2>
-            
             <div class="lesson-card">
-                <h4>٢-١ مبدأ العد الأساسي</h4>
-                <div class="rule-box">العدد الإجمالي للطرق للعمليات المتتالية = ن₁ × ن₂ × ...</div>
-            </div>
-
-            <div class="lesson-card">
-                <h4>٢-٢ التباديل والتوافيق</h4>
+                <h4>ملخص أهم القوانين</h4>
                 <div class="rule-box">ل(ن، ر) = ن! / (ن - ر)! | ق(ن، ر) = ن! / [ر!(ن - ر)!]</div>
             </div>
-
-            <div class="lesson-card">
-                <h4>٢-٣ مبرهنة ذات الحدين والحد العام</h4>
-                <div class="rule-box">الحد العام: ح(ر+1) = ق(ن، ر) × س^(ن-ر) × ص^ر</div>
+            <!-- اختبار تفاعلي للوحدة الثانية -->
+            <div class="quiz-box">
+                <h4>🎯 اختبار ذاتي سريع للوحدة الثانية</h4>
+                <p><strong>السؤال:</strong> أوجد قيمة ق(5، 2) ؟</p>
+                <details>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
+                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 10 (لأن ق(5، 2) = (5 × 4) / (2 × 1) = 10).</p>
+                </details>
             </div>
         </div>
 
         <!-- الوحدة الثالثة -->
         <div class="unit-section">
             <h2>🎲 الوحدة الثالثة: الاحتمالات</h2>
-            
             <div class="lesson-card">
-                <h4>٣-١ المبرهنات الأساسية في الاحتمالات وفضاء العينة</h4>
+                <h4>ملخص أهم القوانين</h4>
                 <div class="rule-box">ل(أ ∪ ب) = ل(أ) + ل(ب) - ل(أ ∩ ب)</div>
             </div>
-
-            <div class="lesson-card">
-                <h4>٣-٢ الاحتمال الشرطي وقانون الضرب والحوادث المستقلة</h4>
-                <div class="rule-box">ل(أ | ب) = ل(أ ∩ ب) / ل(ب)</div>
+            <!-- اختبار تفاعلي للوحدة الثالثة -->
+            <div class="quiz-box">
+                <h4>🎯 اختبار ذاتي سريع للوحدة الثالثة</h4>
+                <p><strong>السؤال:</strong> إذا كان ل(أ) = 0.4 ، ل(ب) = 0.5 ، وكان الحادثان متنافيين، فما قيمة ل(أ ∪ ب) ؟</p>
+                <details>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
+                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 0.9 (بما أنهما متنافيان فإن التقاطع يساوي صفراً، المجموع = 0.4 + 0.5 = 0.9).</p>
+                </details>
             </div>
         </div>
 
         <!-- الوحدة الرابعة -->
         <div class="unit-section">
             <h2>📐 الوحدة الرابعة: القطوع المخروطية</h2>
-            
             <div class="lesson-card">
-                <h4>٤-١ القطع المكافئ وعناصره ومعادلاته</h4>
-                <div class="rule-box">ص² = 4جـ س (حيث البؤرة (جـ، 0))</div>
+                <h4>ملخص أهم القوانين</h4>
+                <div class="rule-box">القطع المكافئ: ص² = 4جـ س | القطع الناقص: (س² / أ²) + (ص² / ب²) = 1</div>
             </div>
-
-            <div class="lesson-card">
-                <h4>٤-٢ القطع الناقص وعناصره ومعادلاته</h4>
-                <div class="rule-box">(س² / أ²) + (ص² / ب²) = 1 (أ > ب)</div>
-            </div>
-
-            <div class="lesson-card">
-                <h4>٤-٣ القطع الزائد وعناصره ومعادلاته</h4>
-                <div class="rule-box">(س² / أ²) - (ص² / ب²) = 1</div>
+            <!-- اختبار تفاعلي للوحدة الرابعة -->
+            <div class="quiz-box">
+                <h4>🎯 اختبار ذاتي سريع للوحدة الرابعة</h4>
+                <p><strong>السؤال:</strong> ما إحداثيات بؤرة القطع المكافئ: ص² = 12س ؟</p>
+                <details>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
+                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> (3، 0) (لأن 4جـ = 12 ← جـ = 3، والبؤرة تقع على محور السينات).</p>
+                </details>
             </div>
         </div>
 
