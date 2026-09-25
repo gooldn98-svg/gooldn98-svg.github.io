@@ -43,7 +43,6 @@
             margin: 30px auto;
             padding: 0 20px;
         }
-        /* لوحة التنقل الرئيسية */
         .nav-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -66,7 +65,6 @@
             background-color: var(--secondary-color);
             color: white;
         }
-        /* أقسام الوحدات */
         .unit-section {
             background-color: var(--card-bg);
             border-radius: 10px;
@@ -81,26 +79,45 @@
             padding-bottom: 10px;
             margin-top: 0;
         }
-        .lessons-list {
+        /* تصميم تفاعلي للدروس */
+        .lesson-dropdown {
             background-color: #fffbeb;
             border: 1px solid #fef3c7;
             border-radius: 8px;
-            padding: 15px;
-            margin-top: 15px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
         }
-        .lessons-list h4 {
-            color: #b45309;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .lessons-list ul {
-            margin: 0;
-            padding-right: 20px;
-        }
-        .lessons-list li {
-            margin-bottom: 6px;
+        .lesson-dropdown summary {
             font-weight: bold;
-            color: #78350f;
+            color: #b45309;
+            font-size: 17px;
+        }
+        .lesson-content {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        .explanation-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        .example-box {
+            background-color: #fdf4ff;
+            border-left: 4px solid #c084fc;
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        .quiz-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 15px;
         }
         .rule-box {
             background-color: #e6f4ea;
@@ -110,53 +127,6 @@
             margin: 12px 0;
             font-weight: bold;
             color: #137333;
-        }
-        .quiz-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .quiz-box h4 {
-            color: var(--blue-accent);
-            margin-top: 0;
-        }
-        details {
-            background-color: #ffffff;
-            border: 1px solid #93c5fd;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        summary {
-            font-weight: bold;
-            color: var(--blue-accent);
-        }
-        /* لوحة تتبع التقدم */
-        .progress-dashboard {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 6px solid var(--accent-color);
-        }
-        .progress-bar-container {
-            background-color: #e5e7eb;
-            border-radius: 5px;
-            height: 15px;
-            width: 100%;
-            margin: 8px 0 15px 0;
-            overflow: hidden;
-        }
-        .progress-fill {
-            background-color: var(--secondary-color);
-            height: 100%;
-            text-align: center;
-            color: white;
-            font-size: 10px;
         }
         footer {
             text-align: center;
@@ -178,7 +148,6 @@
 
     <div class="container">
 
-        <!-- أزرار التنقل الرئيسية -->
         <div class="nav-grid">
             <div class="nav-btn">📚 الوحدات الدراسية</div>
             <div class="nav-btn">🤖 المساعد الذكي</div>
@@ -188,115 +157,83 @@
             <div class="nav-btn">📊 تقدمي الدراسي</div>
         </div>
 
-        <!-- لوحة تتبع التقدم الدراسي -->
-        <div class="progress-dashboard">
-            <h3 style="color: var(--primary-color); margin-top: 0;">📊 مؤشر تقدمك في المنهج</h3>
-            <p><strong>الأعداد المركبة:</strong> ٧٠٪</p>
-            <div class="progress-bar-container"><div class="progress-fill" style="width: 70%;"></div></div>
-            
-            <p><strong>مبدأ العد ومبرهنة ذات الحدين:</strong> ٥٠٪</p>
-            <div class="progress-bar-container"><div class="progress-fill" style="width: 50%;"></div></div>
-            
-            <p><strong>الاحتمالات:</strong> ٤٠٪</p>
-            <div class="progress-bar-container"><div class="progress-fill" style="width: 40%;"></div></div>
-            
-            <p><strong>القطوع المخروطية:</strong> ٢٠٪</p>
-            <div class="progress-bar-container"><div class="progress-fill" style="width: 20%;"></div></div>
-        </div>
-
         <!-- الوحدة الأولى -->
         <div class="unit-section">
             <h2>🔢 الوحدة الأولى: الأعداد المركبة</h2>
-            <div class="lessons-list">
-                <h4>دروس الوحدة المعتمدة:</h4>
-                <ul>
-                    <li>١-١ العدد المركب (الصورة الجبرية، الحقيقي والتخيلي، أرجاند).</li>
-                    <li>١-٢ جمع وطرح الأعداد المركبة والتبسيط الجبري.</li>
-                    <li>١-٣ ضرب وقسمة الأعداد المركبة (باستخدام ت² = -١ ومرافق العدد).</li>
-                    <li>١-٤ الصورة القطبية (المثلثية) للعدد المركب والمعيار ر والسعة.</li>
-                    <li>١-٥ القوى والجذور (دورة قوى التخيلي ونظرية ديموافر وتطبيقاتها).</li>
-                    <li>١-٦ حل معادلة الدرجة الثانية وتمييز الجذور المركبة.</li>
-                </ul>
-            </div>
-            <div class="rule-box">قاعدة أساسية: ع = أ + ب ت | ت² = -١ | ر = |ع| = جذر(أ² + ب²)</div>
-            <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع</h4>
-                <p><strong>السؤال:</strong> ما هو مرافق العدد المركب ع = ٣ - ٤ت ؟</p>
-                <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
-                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت (بتغيير إشارة الجزء التخيلي فقط).</p>
-                </details>
-            </div>
-        </div>
+            <p style="color: #6b7280; font-size: 14px;">اضغط على أي درس أدناه لعرض الشرح، الأمثلة المحلولة، والاختبار الخاص به:</p>
 
-        <!-- الوحدة الثانية -->
-        <div class="unit-section">
-            <h2>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h2>
-            <div class="lessons-list">
-                <h4>دروس الوحدة المعتمدة:</h4>
-                <ul>
-                    <li>٢-١ مبدأ العد الأساسي وتطبيقاته.</li>
-                    <li>٢-٢ التباديل (المفهوم والقوانين).</li>
-                    <li>٢-٣ التوافيق (المفهوم والقوانين والفرق بينها وبين التباديل).</li>
-                    <li>٢-٤ مبرهنة ذات الحدين (التوسع وإيجاد الحد العام والحدود المطلوبة).</li>
-                </ul>
-            </div>
-            <div class="rule-box">قاعدة أساسية: ل(ن، ر) = ن! / (ن - ر)! | ق(ن، ر) = ن! / [ر!(ن - ر)!]</div>
-            <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع</h4>
-                <p><strong>السؤال:</strong> احسب قيمة ق(٥، ٢) ؟</p>
-                <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
-                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ١٠ (لأن (٥ × ٤) / (٢ × ١) = ١٠).</p>
-                </details>
-            </div>
-        </div>
+            <!-- الدرس الأول -->
+            <details class="lesson-dropdown">
+                <summary>١-١ العدد المركب (الصورة الجبرية، الحقيقي والتخيلي، أرجاند)</summary>
+                <div class="lesson-content">
+                    <div class="explanation-box">
+                        <strong>📖 شرح الدرس:</strong> العدد المركب هو عدد يُكتب على الصورة ع = أ + ب ت، حيث أ، ب عددان حقيقيان، وت هي الوحدة التخيلية وتتميز بخاصية أن ت² = -١. يسمى أ بالجزء الحقيقي، وب بالجزء التخيلي.
+                    </div>
+                    <div class="example-box">
+                        <strong>💡 أمثلة محلولة:</strong><br>
+                        • **مثال 1:** عين الجزء الحقيقي والجزء التخيلي في العدد ع = ٥ - ٣ت.<br>
+                        <em>الحل:</em> الجزء الحقيقي = ٥ ، والجزء التخيلي = -٣.<br>
+                        • **مثال 2:** ضع العدد ع = ٧ في صورة عدد مركب.<br>
+                        <em>الحل:</em> ع = ٧ + ٠ت (الجزء التخيلي يساوي صفراً).
+                    </div>
+                    <div class="quiz-box">
+                        <strong>🎯 اختبار قصير على الدرس:</strong>
+                        <p>ما هو الجزء التخيلي في العدد المركب ع = -٢ + ٦ت ؟</p>
+                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
+                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
+                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٦.</p>
+                        </details>
+                    </div>
+                </div>
+            </details>
 
-        <!-- الوحدة الثالثة -->
-        <div class="unit-section">
-            <h2>🎲 الوحدة الثالثة: الاحتمالات</h2>
-            <div class="lessons-list">
-                <h4>دروس الوحدة المعتمدة:</h4>
-                <ul>
-                    <li>٣-١ بعض المبرهنات الأساسية في الاحتمالات وقوانينها.</li>
-                    <li>٣-٢ بناء النموذج الاحتمالي (فضاء العينة والحوادث).</li>
-                    <li>٣-٣ الاحتمال الشرطي وقانون الضرب والحوادث المستقلة.</li>
-                </ul>
-                <p style="font-size: 13px; color: #dc2626; margin-top: 8px;">* ملاحظة: تم استبعاد قانون الاحتمال الثنائي والسحب مع/بدون إعادة وفقاً للمنهج المقرّر.</p>
-            </div>
-            <div class="rule-box">قاعدة أساسية: ل(أ ∪ ب) = ل(أ) + ل(ب) - ل(أ ∩ ب)</div>
-            <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع</h4>
-                <p><strong>السؤال:</strong> إذا كان ل(أ) = ٠.٤ ، ل(ب) = ٠.٥ وكان الحادثان متنافيين، فما ل(أ ∪ ب) ؟</p>
-                <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
-                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ٠.٩ (لأن التقاطع يساوي صفراً في الحوادث المتنافية).</p>
-                </details>
-            </div>
-        </div>
+            <!-- الدرس الثاني -->
+            <details class="lesson-dropdown">
+                <summary>١-٢ جمع وطرح الأعداد المركبة والتبسيط الجبري</summary>
+                <div class="lesson-content">
+                    <div class="explanation-box">
+                        <strong>📖 شرح الدرس:</strong> لجمع أو طرح عددين مركبين، نجمع (أو نطرح) الأجزاء الحقيقية معاً، والأجزاء التخيلية معاً. أي أن: (أ + ب ت) ± (جـ + د ت) = (أ ± جـ) + (ب ± د) ت.
+                    </div>
+                    <div class="example-box">
+                        <strong>💡 أمثلة محلولة:</strong><br>
+                        • **مثال:** أوجد ناتج: (٣ + ٢ت) + (٥ - ٤ت).<br>
+                        <em>الحل:</em> (٣ + ٥) + (٢ - ٤)ت = ٨ - ٢ت.
+                    </div>
+                    <div class="quiz-box">
+                        <strong>🎯 اختبار قصير على الدرس:</strong>
+                        <p>أوجد أبسط صورة للمقدار: (٧ + ٣ت) - (٤ - ت) ؟</p>
+                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
+                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
+                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت (حيث ٧-٤ = ٣ ، و ٣ت - (-ت) = ٤ت).</p>
+                        </details>
+                    </div>
+                </div>
+            </details>
 
-        <!-- الوحدة الرابعة -->
-        <div class="unit-section">
-            <h2>📐 الوحدة الرابعة: القطوع المخروطية</h2>
-            <div class="lessons-list">
-                <h4>دروس الوحدة المعتمدة:</h4>
-                <ul>
-                    <li>٤-١ تمهيد ومفهوم القطوع المخروطية والتعريفات الأساسية.</li>
-                    <li>٤-٢ القطع المكافئ (العناصر، المعادلات، والرسوم البيانية).</li>
-                    <li>٤-٣ القطع الناقص (العناصر، المعادلات، والخصائص).</li>
-                    <li>٤-٤ القطع الزائد (العناصر والمعادلات).</li>
-                </ul>
-                <p style="font-size: 13px; color: #dc2626; margin-top: 8px;">* ملاحظة: تم استبعاد انسحاب ودوران المحاور الإحداثية وفقاً للمنهج المقرّر.</p>
-            </div>
-            <div class="rule-box">قاعدة أساسية: القطع المكافئ: ص² = 4جـ س | القطع الناقص: (س² / أ²) + (ص² / ب²) = 1</div>
-            <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع</h4>
-                <p><strong>السؤال:</strong> أوجد إحداثيات بؤرة القطع المكافئ: ص² = ١٢س ؟</p>
-                <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
-                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> (٣، ٠) (حيث 4جـ = ١٢ ومنها جـ = ٣).</p>
-                </details>
-            </div>
+            <!-- الدرس الثالث -->
+            <details class="lesson-dropdown">
+                <summary>١-٣ ضرب وقسمة الأعداد المركبة (باستخدام ت² = -١ ومرافق العدد)</summary>
+                <div class="lesson-content">
+                    <div class="explanation-box">
+                        <strong>📖 شرح الدرس:</strong> يتم ضرب الأعداد المركبة كالأقواس الجبرية مع تعويض ت² بـ (-١). وفي القسمة، نضرب بسط ومقام الكسر في مرافق المقام لتخلص من التخيل في المقام.
+                    </div>
+                    <div class="example-box">
+                        <strong>💡 أمثلة محلولة:</strong><br>
+                        • **مثال:** أوجد ناتج ضرب (٢ + ت)(٣ - ٢ت).<br>
+                        <em>الحل:</em> = ٦ - ٤ت + ٣ت - ٢ت² = ٦ - ت - ٢(-١) = ٨ - ت.
+                    </div>
+                    <div class="quiz-box">
+                        <strong>🎯 اختبار قصير على الدرس:</strong>
+                        <p>ما هو مرافق العدد ع = ٣ - ٤ت ؟</p>
+                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
+                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
+                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت.</p>
+                        </details>
+                    </div>
+                </div>
+            </details>
+
+            <div class="rule-box">قاعدة أساسية عامة للوحدة: ع = أ + ب ت | ت² = -١ | ر = |ع| = جذر(أ² + ب²)</div>
         </div>
 
     </div>
