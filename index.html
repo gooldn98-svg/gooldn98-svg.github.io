@@ -3,245 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الأنيس في الرياضيات | الصف الثالث الثانوي</title>
+    <title>وحدة الأعداد المركبة</title>
     <style>
-        :root {
-            --primary-color: #1b4d3e;
-            --secondary-color: #2c6b56;
-            --bg-color: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-color: #333333;
-            --accent-color: #d97706;
-            --blue-accent: #1d4ed8;
-        }
         body {
-            font-family: 'Tahoma', Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
             margin: 0;
             padding: 0;
-            direction: rtl;
             line-height: 1.6;
         }
         header {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 40px 20px;
         }
         header h1 {
-            margin: 0 0 10px 0;
-            font-size: 34px;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 18px;
-            opacity: 0.9;
+            margin: 0;
+            font-size: 28px;
         }
         .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-bottom: 35px;
-        }
-        .nav-btn {
-            background-color: var(--card-bg);
-            border: 2px solid var(--secondary-color);
-            color: var(--primary-color);
-            padding: 15px;
-            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px 30px;
             border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .nav-btn:hover {
-            background-color: var(--secondary-color);
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .math-box {
+            background-color: #e8f4f8;
+            border-right: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .quiz-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #bdc3c7;
+        }
+        .question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .options {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .options label:hover {
+            background: #e2e2e2;
+        }
+        button {
+            background-color: #27ae60;
             color: white;
-        }
-        .unit-section {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 6px solid var(--secondary-color);
-        }
-        .unit-section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        /* تصميم تفاعلي للدروس */
-        .lesson-dropdown {
-            background-color: #fffbeb;
-            border: 1px solid #fef3c7;
-            border-radius: 8px;
-            padding: 12px 15px;
-            margin-bottom: 12px;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
         }
-        .lesson-dropdown summary {
-            font-weight: bold;
-            color: #b45309;
-            font-size: 17px;
+        button:hover {
+            background-color: #2ecc71;
         }
-        .lesson-content {
-            background-color: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
+        #result {
+            margin-top: 20px;
             padding: 15px;
-            margin-top: 10px;
-        }
-        .explanation-box {
-            background-color: #f0fdf4;
-            border-left: 4px solid #16a34a;
-            padding: 10px 15px;
-            margin: 10px 0;
-        }
-        .example-box {
-            background-color: #fdf4ff;
-            border-left: 4px solid #c084fc;
-            padding: 10px 15px;
-            margin: 10px 0;
-        }
-        .quiz-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            padding: 12px;
-            border-radius: 6px;
-            margin-top: 15px;
-        }
-        .rule-box {
-            background-color: #e6f4ea;
-            border: 1px solid #ceead6;
-            padding: 12px;
-            border-radius: 6px;
-            margin: 12px 0;
+            font-size: 18px;
             font-weight: bold;
-            color: #137333;
+            text-align: center;
+            border-radius: 5px;
+            display: none;
         }
         footer {
             text-align: center;
-            padding: 25px;
             margin-top: 40px;
-            background-color: #1f2937;
-            color: #d1d5db;
-            font-size: 15px;
+            padding: 15px;
+            color: #7f8c8d;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>الأنيس في الرياضيات</h1>
-        <p>رياضيات الصف الثالث الثانوي – القسم العلمي – قسم الجبر | المنهج اليمني</p>
-        <p style="font-size: 14px; opacity: 0.8;">بيئة تعليمية تفاعلية مدعومة بالذكاء الاصطناعي</p>
+        <h1>وحدة الأعداد المركبة</h1>
+        <p>مفاهيم أساسية وتطبيقات</p>
     </header>
 
     <div class="container">
+        <!-- قسم الشرح -->
+        <section id="explanation">
+            <h2>1. مقدمة في الأعداد التخيلية</h2>
+            <p>ظهرت الحاجة للأعداد التخيلية لحل معادلات مثل (س² + 1 = 0)، حيث لا يوجد عدد حقيقي مربعه سالب. لذلك تم تعريف الوحدة التخيلية (ت):</p>
+            <div class="math-box">ت = √-1 &nbsp; ⟸ &nbsp; ت² = -1</div>
 
-        <div class="nav-grid">
-            <div class="nav-btn">📚 الوحدات الدراسية</div>
-            <div class="nav-btn">🤖 المساعد الذكي</div>
-            <div class="nav-btn">📝 بنك الأسئلة</div>
-            <div class="nav-btn">🎯 الاختبارات التفاعلية</div>
-            <div class="nav-btn">📄 الاختبارات الوزارية</div>
-            <div class="nav-btn">📊 تقدمي الدراسي</div>
-        </div>
+            <h2>2. الصورة الجبرية للعدد المركب</h2>
+            <p>يتكون العدد المركب من جزئين: جزء حقيقي وجزء تخيلي، ويُكتب بالصورة القياسية التالية:</p>
+            <div class="math-box">ع = س + ت ص</div>
+            <ul>
+                <li><strong>س:</strong> الجزء الحقيقي.</li>
+                <li><strong>ص:</strong> الجزء التخيلي.</li>
+            </ul>
 
-        <!-- الوحدة الأولى -->
-        <div class="unit-section">
-            <h2>🔢 الوحدة الأولى: الأعداد المركبة</h2>
-            <p style="color: #6b7280; font-size: 14px;">اضغط على أي درس أدناه لعرض الشرح، الأمثلة المحلولة، والاختبار الخاص به:</p>
+            <h2>3. العمليات على الأعداد المركبة</h2>
+            <p>عند جمع أو طرح الأعداد المركبة، نجمع الأجزاء الحقيقية معاً والأجزاء التخيلية معاً:</p>
+            <div class="math-box">(س₁ + ت ص₁) + (س₂ + ت ص₂) = (س₁ + س₂) + ت(ص₁ + ص₂)</div>
 
-            <!-- الدرس الأول -->
-            <details class="lesson-dropdown">
-                <summary>١-١ العدد المركب (الصورة الجبرية، الحقيقي والتخيلي، أرجاند)</summary>
-                <div class="lesson-content">
-                    <div class="explanation-box">
-                        <strong>📖 شرح الدرس:</strong> العدد المركب هو عدد يُكتب على الصورة ع = أ + ب ت، حيث أ، ب عددان حقيقيان، وت هي الوحدة التخيلية وتتميز بخاصية أن ت² = -١. يسمى أ بالجزء الحقيقي، وب بالجزء التخيلي.
-                    </div>
-                    <div class="example-box">
-                        <strong>💡 أمثلة محلولة:</strong><br>
-                        • **مثال 1:** عين الجزء الحقيقي والجزء التخيلي في العدد ع = ٥ - ٣ت.<br>
-                        <em>الحل:</em> الجزء الحقيقي = ٥ ، والجزء التخيلي = -٣.<br>
-                        • **مثال 2:** ضع العدد ع = ٧ في صورة عدد مركب.<br>
-                        <em>الحل:</em> ع = ٧ + ٠ت (الجزء التخيلي يساوي صفراً).
-                    </div>
-                    <div class="quiz-box">
-                        <strong>🎯 اختبار قصير على الدرس:</strong>
-                        <p>ما هو الجزء التخيلي في العدد المركب ع = -٢ + ٦ت ؟</p>
-                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
-                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
-                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٦.</p>
-                        </details>
-                    </div>
+            <h2>4. مرافق العدد المركب</h2>
+            <p>مرافق العدد المركب (ع) يُرمز له بالرمز (ع̅)، ونحصل عليه بتغيير إشارة الجزء التخيلي فقط:</p>
+            <div class="math-box">إذا كان: ع = س + ت ص <br> فإن: ع̅ = س - ت ص</div>
+        </section>
+
+        <!-- قسم الاختبار -->
+        <section class="quiz-section">
+            <h2>اختبر فهمك</h2>
+            <form id="quizForm">
+                
+                <div class="question">1. ما هي قيمة ت² ؟</div>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> 1</label>
+                    <label><input type="radio" name="q1" value="b"> -1</label>
+                    <label><input type="radio" name="q1" value="c"> ت</label>
                 </div>
-            </details>
 
-            <!-- الدرس الثاني -->
-            <details class="lesson-dropdown">
-                <summary>١-٢ جمع وطرح الأعداد المركبة والتبسيط الجبري</summary>
-                <div class="lesson-content">
-                    <div class="explanation-box">
-                        <strong>📖 شرح الدرس:</strong> لجمع أو طرح عددين مركبين، نجمع (أو نطرح) الأجزاء الحقيقية معاً، والأجزاء التخيلية معاً. أي أن: (أ + ب ت) ± (جـ + د ت) = (أ ± جـ) + (ب ± د) ت.
-                    </div>
-                    <div class="example-box">
-                        <strong>💡 أمثلة محلولة:</strong><br>
-                        • **مثال:** أوجد ناتج: (٣ + ٢ت) + (٥ - ٤ت).<br>
-                        <em>الحل:</em> (٣ + ٥) + (٢ - ٤)ت = ٨ - ٢ت.
-                    </div>
-                    <div class="quiz-box">
-                        <strong>🎯 اختبار قصير على الدرس:</strong>
-                        <p>أوجد أبسط صورة للمقدار: (٧ + ٣ت) - (٤ - ت) ؟</p>
-                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
-                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
-                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت (حيث ٧-٤ = ٣ ، و ٣ت - (-ت) = ٤ت).</p>
-                        </details>
-                    </div>
+                <div class="question">2. ما هو مرافق العدد المركب (ع = 4 + 3ت) ؟</div>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> 4 - 3ت</label>
+                    <label><input type="radio" name="q2" value="b"> -4 + 3ت</label>
+                    <label><input type="radio" name="q2" value="c"> -4 - 3ت</label>
                 </div>
-            </details>
 
-            <!-- الدرس الثالث -->
-            <details class="lesson-dropdown">
-                <summary>١-٣ ضرب وقسمة الأعداد المركبة (باستخدام ت² = -١ ومرافق العدد)</summary>
-                <div class="lesson-content">
-                    <div class="explanation-box">
-                        <strong>📖 شرح الدرس:</strong> يتم ضرب الأعداد المركبة كالأقواس الجبرية مع تعويض ت² بـ (-١). وفي القسمة، نضرب بسط ومقام الكسر في مرافق المقام لتخلص من التخيل في المقام.
-                    </div>
-                    <div class="example-box">
-                        <strong>💡 أمثلة محلولة:</strong><br>
-                        • **مثال:** أوجد ناتج ضرب (٢ + ت)(٣ - ٢ت).<br>
-                        <em>الحل:</em> = ٦ - ٤ت + ٣ت - ٢ت² = ٦ - ت - ٢(-١) = ٨ - ت.
-                    </div>
-                    <div class="quiz-box">
-                        <strong>🎯 اختبار قصير على الدرس:</strong>
-                        <p>ما هو مرافق العدد ع = ٣ - ٤ت ؟</p>
-                        <details style="background: #fff; padding: 8px; border-radius: 4px; border: 1px solid #93c5fd; cursor: pointer;">
-                            <summary style="color: #1d4ed8;">عرض الإجابة النموذجية</summary>
-                            <p style="margin-top: 5px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت.</p>
-                        </details>
-                    </div>
+                <div class="question">3. ناتج جمع العددين المركبين (2 + 5ت) و (3 + 2ت) هو:</div>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> 5 + 3ت</label>
+                    <label><input type="radio" name="q3" value="b"> 6 + 10ت</label>
+                    <label><input type="radio" name="q3" value="c"> 5 + 7ت</label>
                 </div>
-            </details>
 
-            <div class="rule-box">قاعدة أساسية عامة للوحدة: ع = أ + ب ت | ت² = -١ | ر = |ع| = جذر(أ² + ب²)</div>
-        </div>
+                <div class="question">4. إذا كان ع = 5 فإن الجزء التخيلي (ص) يساوي:</div>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> 5</label>
+                    <label><input type="radio" name="q4" value="b"> 0</label>
+                    <label><input type="radio" name="q4" value="c"> 1</label>
+                </div>
 
+                <button type="button" onclick="calculateScore()">تحقق من الإجابات</button>
+            </form>
+
+            <div id="result"></div>
+        </section>
     </div>
 
     <footer>
-        <p>منصة الأنيس في الرياضيات – مرجع طالب الصف الثالث الثانوي (القسم العلمي)</p>
-        <p style="margin-top: 5px; font-weight: bold; color: #fbbf24;">إعداد أ/ أنيس المقطري</p>
+        تم الإعداد والتصميم بواسطة: الأستاذ أنيس عبده قاسم المقطري
     </footer>
 
+    <script>
+        function calculateScore() {
+            let score = 0;
+            const totalQuestions = 4;
+            
+            // الإجابات الصحيحة
+            const answers = {
+                q1: 'b', // -1
+                q2: 'a', // 4 - 3ت
+                q3: 'c', // 5 + 7ت
+                q4: 'b'  // 0
+            };
+
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            let allAnswered = true;
+
+            // التحقق من الإجابات وحساب الدرجة
+            for (let q in answers) {
+                const selected = form.querySelector(`input[name="${q}"]:checked`);
+                if (selected) {
+                    if (selected.value === answers[q]) {
+                        score++;
+                    }
+                } else {
+                    allAnswered = false;
+                }
+            }
+
+            if (!allAnswered) {
+                resultDiv.style.display = 'block';
+                resultDiv.style.backgroundColor = '#f39c12';
+                resultDiv.style.color = '#fff';
+                resultDiv.innerHTML = 'الرجاء الإجابة على جميع الأسئلة قبل التحقق.';
+                return;
+            }
+
+            // عرض النتيجة
+            resultDiv.style.display = 'block';
+            if (score === totalQuestions) {
+                resultDiv.style.backgroundColor = '#27ae60';
+                resultDiv.style.color = '#fff';
+                resultDiv.innerHTML = `ممتاز! علامتك ${score} من ${totalQuestions}. لقد أتقنت المفاهيم الأساسية.`;
+            } else if (score >= 2) {
+                resultDiv.style.backgroundColor = '#f1c40f';
+                resultDiv.style.color = '#333';
+                resultDiv.innerHTML = `جيد جداً. علامتك ${score} من ${totalQuestions}. راجع الشرح وحاول مرة أخرى.`;
+            } else {
+                resultDiv.style.backgroundColor = '#e74c3c';
+                resultDiv.style.color = '#fff';
+                resultDiv.innerHTML = `علامتك ${score} من ${totalQuestions}. يُنصح بإعادة قراءة الشرح بتركيز أكبر.`;
+            }
+        }
+    </script>
 </body>
 </html>
