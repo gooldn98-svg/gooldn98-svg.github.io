@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الأنيس في الرياضيات - الجبر (الصف الثالث الثانوي)</title>
+    <title>منصة الأنيس في الرياضيات | الصف الثالث الثانوي</title>
     <style>
         :root {
             --primary-color: #1b4d3e;
@@ -12,6 +12,7 @@
             --card-bg: #ffffff;
             --text-color: #333333;
             --accent-color: #d97706;
+            --blue-accent: #1d4ed8;
         }
         body {
             font-family: 'Tahoma', Arial, sans-serif;
@@ -30,18 +31,42 @@
         }
         header h1 {
             margin: 0 0 10px 0;
-            font-size: 32px;
+            font-size: 34px;
         }
         header p {
-            margin: 0;
+            margin: 5px 0;
             font-size: 18px;
             opacity: 0.9;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 30px auto;
             padding: 0 20px;
         }
+        /* لوحة التنقل الرئيسية */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+        .nav-btn {
+            background-color: var(--card-bg);
+            border: 2px solid var(--secondary-color);
+            color: var(--primary-color);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .nav-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        /* أقسام الوحدات */
         .unit-section {
             background-color: var(--card-bg);
             border-radius: 10px;
@@ -52,28 +77,37 @@
         }
         .unit-section h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
+            border-bottom: 2px solid #e5e7eb;
             padding-bottom: 10px;
             margin-top: 0;
         }
-        .lesson-card {
-            background-color: #f9fafb;
-            border: 1px solid #e5e7eb;
+        .lessons-list {
+            background-color: #fffbeb;
+            border: 1px solid #fef3c7;
             border-radius: 8px;
             padding: 15px;
             margin-top: 15px;
         }
-        .lesson-card h4 {
-            color: var(--secondary-color);
+        .lessons-list h4 {
+            color: #b45309;
             margin-top: 0;
             margin-bottom: 10px;
+        }
+        .lessons-list ul {
+            margin: 0;
+            padding-right: 20px;
+        }
+        .lessons-list li {
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #78350f;
         }
         .rule-box {
             background-color: #e6f4ea;
             border: 1px solid #ceead6;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 8px 0;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 12px 0;
             font-weight: bold;
             color: #137333;
         }
@@ -85,7 +119,7 @@
             margin-top: 20px;
         }
         .quiz-box h4 {
-            color: #1d4ed8;
+            color: var(--blue-accent);
             margin-top: 0;
         }
         details {
@@ -98,41 +132,99 @@
         }
         summary {
             font-weight: bold;
-            color: #1e40af;
+            color: var(--blue-accent);
+        }
+        /* لوحة تتبع التقدم */
+        .progress-dashboard {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--accent-color);
+        }
+        .progress-bar-container {
+            background-color: #e5e7eb;
+            border-radius: 5px;
+            height: 15px;
+            width: 100%;
+            margin: 8px 0 15px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background-color: var(--secondary-color);
+            height: 100%;
+            text-align: center;
+            color: white;
+            font-size: 10px;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-            background-color: #e5e7eb;
-            color: #4b5563;
-            font-size: 14px;
+            padding: 25px;
+            margin-top: 40px;
+            background-color: #1f2937;
+            color: #d1d5db;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>منصة الأنيس في الرياضيات</h1>
-        <p>مرجع طالب الصف الثالث الثانوي (القسم العلمي) – مقرر الجبر | المنهج اليمني</p>
+        <h1>الأنيس في الرياضيات</h1>
+        <p>رياضيات الصف الثالث الثانوي – القسم العلمي – قسم الجبر | المنهج اليمني</p>
+        <p style="font-size: 14px; opacity: 0.8;">بيئة تعليمية تفاعلية مدعومة بالذكاء الاصطناعي</p>
     </header>
 
     <div class="container">
 
+        <!-- أزرار التنقل الرئيسية -->
+        <div class="nav-grid">
+            <div class="nav-btn">📚 الوحدات الدراسية</div>
+            <div class="nav-btn">🤖 المساعد الذكي</div>
+            <div class="nav-btn">📝 بنك الأسئلة</div>
+            <div class="nav-btn">🎯 الاختبارات التفاعلية</div>
+            <div class="nav-btn">📄 الاختبارات الوزارية</div>
+            <div class="nav-btn">📊 تقدمي الدراسي</div>
+        </div>
+
+        <!-- لوحة تتبع التقدم الدراسي -->
+        <div class="progress-dashboard">
+            <h3 style="color: var(--primary-color); margin-top: 0;">📊 مؤشر تقدمك في المنهج</h3>
+            <p><strong>الأعداد المركبة:</strong> ٧٠٪</p>
+            <div class="progress-bar-container"><div class="progress-fill" style="width: 70%;"></div></div>
+            
+            <p><strong>مبدأ العد ومبرهنة ذات الحدين:</strong> ٥٠٪</p>
+            <div class="progress-bar-container"><div class="progress-fill" style="width: 50%;"></div></div>
+            
+            <p><strong>الاحتمالات:</strong> ٤٠٪</p>
+            <div class="progress-bar-container"><div class="progress-fill" style="width: 40%;"></div></div>
+            
+            <p><strong>القطوع المخروطية:</strong> ٢٠٪</p>
+            <div class="progress-bar-container"><div class="progress-fill" style="width: 20%;"></div></div>
+        </div>
+
         <!-- الوحدة الأولى -->
         <div class="unit-section">
             <h2>🔢 الوحدة الأولى: الأعداد المركبة</h2>
-            <div class="lesson-card">
-                <h4>ملخص أهم القوانين</h4>
-                <div class="rule-box">الصورة الجبرية: ع = أ + ب ت | مرافق ع = أ - بت | ر = جذر(أ² + ب²)</div>
+            <div class="lessons-list">
+                <h4>دروس الوحدة المعتمدة:</h4>
+                <ul>
+                    <li>١-١ العدد المركب (الصورة الجبرية، الحقيقي والتخيلي، أرجاند).</li>
+                    <li>١-٢ جمع وطرح الأعداد المركبة والتبسيط الجبري.</li>
+                    <li>١-٣ ضرب وقسمة الأعداد المركبة (باستخدام ت² = -١ ومرافق العدد).</li>
+                    <li>١-٤ الصورة القطبية (المثلثية) للعدد المركب والمعيار ر والسعة.</li>
+                    <li>١-٥ القوى والجذور (دورة قوى التخيلي ونظرية ديموافر وتطبيقاتها).</li>
+                    <li>١-٦ حل معادلة الدرجة الثانية وتمييز الجذور المركبة.</li>
+                </ul>
             </div>
-            <!-- اختبار تفاعلي للوحدة الأولى -->
+            <div class="rule-box">قاعدة أساسية: ع = أ + ب ت | ت² = -١ | ر = |ع| = جذر(أ² + ب²)</div>
             <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع للوحدة الأولى</h4>
-                <p><strong>السؤال:</strong> ما هو المرافق للعدد المركب ع = 3 - 4ت ؟</p>
+                <h4>🎯 اختبار ذاتي سريع</h4>
+                <p><strong>السؤال:</strong> ما هو مرافق العدد المركب ع = ٣ - ٤ت ؟</p>
                 <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
-                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 3 + 4ت (يتم تغيير إشارة الجزء التخيلي فقط).</p>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
+                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ٣ + ٤ت (بتغيير إشارة الجزء التخيلي فقط).</p>
                 </details>
             </div>
         </div>
@@ -140,17 +232,22 @@
         <!-- الوحدة الثانية -->
         <div class="unit-section">
             <h2>🔢 الوحدة الثانية: مبدأ العد ومبرهنة ذات الحدين</h2>
-            <div class="lesson-card">
-                <h4>ملخص أهم القوانين</h4>
-                <div class="rule-box">ل(ن، ر) = ن! / (ن - ر)! | ق(ن، ر) = ن! / [ر!(ن - ر)!]</div>
+            <div class="lessons-list">
+                <h4>دروس الوحدة المعتمدة:</h4>
+                <ul>
+                    <li>٢-١ مبدأ العد الأساسي وتطبيقاته.</li>
+                    <li>٢-٢ التباديل (المفهوم والقوانين).</li>
+                    <li>٢-٣ التوافيق (المفهوم والقوانين والفرق بينها وبين التباديل).</li>
+                    <li>٢-٤ مبرهنة ذات الحدين (التوسع وإيجاد الحد العام والحدود المطلوبة).</li>
+                </ul>
             </div>
-            <!-- اختبار تفاعلي للوحدة الثانية -->
+            <div class="rule-box">قاعدة أساسية: ل(ن، ر) = ن! / (ن - ر)! | ق(ن، ر) = ن! / [ر!(ن - ر)!]</div>
             <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع للوحدة الثانية</h4>
-                <p><strong>السؤال:</strong> أوجد قيمة ق(5، 2) ؟</p>
+                <h4>🎯 اختبار ذاتي سريع</h4>
+                <p><strong>السؤال:</strong> احسب قيمة ق(٥، ٢) ؟</p>
                 <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
-                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 10 (لأن ق(5، 2) = (5 × 4) / (2 × 1) = 10).</p>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
+                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ١٠ (لأن (٥ × ٤) / (٢ × ١) = ١٠).</p>
                 </details>
             </div>
         </div>
@@ -158,17 +255,22 @@
         <!-- الوحدة الثالثة -->
         <div class="unit-section">
             <h2>🎲 الوحدة الثالثة: الاحتمالات</h2>
-            <div class="lesson-card">
-                <h4>ملخص أهم القوانين</h4>
-                <div class="rule-box">ل(أ ∪ ب) = ل(أ) + ل(ب) - ل(أ ∩ ب)</div>
+            <div class="lessons-list">
+                <h4>دروس الوحدة المعتمدة:</h4>
+                <ul>
+                    <li>٣-١ بعض المبرهنات الأساسية في الاحتمالات وقوانينها.</li>
+                    <li>٣-٢ بناء النموذج الاحتمالي (فضاء العينة والحوادث).</li>
+                    <li>٣-٣ الاحتمال الشرطي وقانون الضرب والحوادث المستقلة.</li>
+                </ul>
+                <p style="font-size: 13px; color: #dc2626; margin-top: 8px;">* ملاحظة: تم استبعاد قانون الاحتمال الثنائي والسحب مع/بدون إعادة وفقاً للمنهج المقرّر.</p>
             </div>
-            <!-- اختبار تفاعلي للوحدة الثالثة -->
+            <div class="rule-box">قاعدة أساسية: ل(أ ∪ ب) = ل(أ) + ل(ب) - ل(أ ∩ ب)</div>
             <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع للوحدة الثالثة</h4>
-                <p><strong>السؤال:</strong> إذا كان ل(أ) = 0.4 ، ل(ب) = 0.5 ، وكان الحادثان متنافيين، فما قيمة ل(أ ∪ ب) ؟</p>
+                <h4>🎯 اختبار ذاتي سريع</h4>
+                <p><strong>السؤال:</strong> إذا كان ل(أ) = ٠.٤ ، ل(ب) = ٠.٥ وكان الحادثان متنافيين، فما ل(أ ∪ ب) ؟</p>
                 <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
-                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> 0.9 (بما أنهما متنافيان فإن التقاطع يساوي صفراً، المجموع = 0.4 + 0.5 = 0.9).</p>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
+                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> ٠.٩ (لأن التقاطع يساوي صفراً في الحوادث المتنافية).</p>
                 </details>
             </div>
         </div>
@@ -176,17 +278,23 @@
         <!-- الوحدة الرابعة -->
         <div class="unit-section">
             <h2>📐 الوحدة الرابعة: القطوع المخروطية</h2>
-            <div class="lesson-card">
-                <h4>ملخص أهم القوانين</h4>
-                <div class="rule-box">القطع المكافئ: ص² = 4جـ س | القطع الناقص: (س² / أ²) + (ص² / ب²) = 1</div>
+            <div class="lessons-list">
+                <h4>دروس الوحدة المعتمدة:</h4>
+                <ul>
+                    <li>٤-١ تمهيد ومفهوم القطوع المخروطية والتعريفات الأساسية.</li>
+                    <li>٤-٢ القطع المكافئ (العناصر، المعادلات، والرسوم البيانية).</li>
+                    <li>٤-٣ القطع الناقص (العناصر، المعادلات، والخصائص).</li>
+                    <li>٤-٤ القطع الزائد (العناصر والمعادلات).</li>
+                </ul>
+                <p style="font-size: 13px; color: #dc2626; margin-top: 8px;">* ملاحظة: تم استبعاد انسحاب ودوران المحاور الإحداثية وفقاً للمنهج المقرّر.</p>
             </div>
-            <!-- اختبار تفاعلي للوحدة الرابعة -->
+            <div class="rule-box">قاعدة أساسية: القطع المكافئ: ص² = 4جـ س | القطع الناقص: (س² / أ²) + (ص² / ب²) = 1</div>
             <div class="quiz-box">
-                <h4>🎯 اختبار ذاتي سريع للوحدة الرابعة</h4>
-                <p><strong>السؤال:</strong> ما إحداثيات بؤرة القطع المكافئ: ص² = 12س ؟</p>
+                <h4>🎯 اختبار ذاتي سريع</h4>
+                <p><strong>السؤال:</strong> أوجد إحداثيات بؤرة القطع المكافئ: ص² = ١٢س ؟</p>
                 <details>
-                    <summary>اضغط هنا لعرض الإجابة النموذجية والحل</summary>
-                    <p style="margin-top: 10px; color: #15803d;"><strong>الإجابة:</strong> (3، 0) (لأن 4جـ = 12 ← جـ = 3، والبؤرة تقع على محور السينات).</p>
+                    <summary>اضغط هنا لعرض الإجابة النموذجية</summary>
+                    <p style="margin-top: 8px; color: #15803d;"><strong>الإجابة:</strong> (٣، ٠) (حيث 4جـ = ١٢ ومنها جـ = ٣).</p>
                 </details>
             </div>
         </div>
@@ -194,7 +302,8 @@
     </div>
 
     <footer>
-        <p>إعداد أ/ أنيس المقطري | منصة الأنيس في الرياضيات</p>
+        <p>منصة الأنيس في الرياضيات – مرجع طالب الصف الثالث الثانوي (القسم العلمي)</p>
+        <p style="margin-top: 5px; font-weight: bold; color: #fbbf24;">إعداد أ/ أنيس المقطري</p>
     </footer>
 
 </body>
